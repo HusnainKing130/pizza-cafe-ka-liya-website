@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Navbar</title>
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+/* HEADER */
+header{
+  width:100%;
+  background:#ffcc00;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 100px;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+/* LOGO */
+.logo0{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#d62828;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#d62828;
+}
+
+/* BUTTON */
+.btn0{
+  background:#d62828;
+  color:white;
+  border:none;
+  padding:8px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* ICONS */
+.icons0{
+  display:flex;
+  gap:12px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* HAMBURGER */
+.hamburger0{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* MOBILE MENU */
+@media(max-width:768px){
+
+  nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:#ffcc00;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+    display:none;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .hamburger0{
+    display:block;
+  }
+
+  .icons0{
+    display:none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO SECTION */
+.hero1{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:70vh;
+  padding:50px 8%;
+  position:relative;
+  overflow:hidden;
+  background: red;
+}
+
+/* TEXT CONTENT */
+.hero-content1{
+  max-width:550px;
+  animation:fadeInLeft 1.2s ease;
+}
+
+.hero-content1 h1{
+  font-size:48px;
+  font-weight:800;
+  margin-bottom:20px;
+  line-height:1.2;
+}
+
+.hero-content1 p{
+  font-size:18px;
+  margin-bottom:25px;
+  opacity:0.9;
+}
+
+/* BUTTON */
+.btn1{
+  display:inline-block;
+  background:#ffd54f;
+  color:#ff2c2c;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn1:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* IMAGE SECTION */
+.hero-img1{
+  position:relative;
+  animation:fadeInRight 1.2s ease;
+}
+
+.hero-img1 img{
+  width:620px;
+  animation:float 3s ease-in-out infinite;
+}
+
+/* FLOATING ICON */
+.icon1{
+  position:absolute;
+  top:-20px;
+  right:10px;
+  background: #fff;
+  color:#ff2c2c;
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  animation:bounce 2s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInLeft{
+  from{opacity:0; transform:translateX(-50px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeInRight{
+  from{opacity:0; transform:translateX(50px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero1{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-img1 img{
+    width:300px;
+    margin-top:30px;
+  }
+
+  .icon1{
+    right:50%;
+    transform:translateX(50%);
+  }
+
+  .hero-content1 h1{
+    font-size:34px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section2{
+  padding:60px 8%;
+  background:#eeeeee;
+}
+
+/* TOP BOXES */
+.top-boxes2{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.box{
+  width:220px;
+  border-radius:15px;
+  overflow:hidden;
+  text-align:center;
+  position:relative;
+}
+
+.box.red2{ background:#ff2c2c; }
+.box.yellow2{ background:#ffd54f; }
+
+.box img{
+  width:120px;
+  margin-top:20px;
+}
+
+.box h3{
+  color:#fff;
+  padding:15px;
+}
+
+/* ARROWS */
+.arrows2{
+  display:flex;
+  justify-content:center;
+  gap:200px;
+  margin-bottom:50px;
+  font-size: bold;
+}
+
+.arrow2{
+  font-size:30px;
+  color:#333;
+}
+
+/* CARDS GRID */
+.cards2{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+/* CARD */
+.card2{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+  position:relative;
+}
+
+.card2:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+.card2 img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* ICON BADGE */
+.badge2{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#ff2c2c;
+  color:#fff;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* CONTENT */
+.card-content2{
+  padding:15px;
+}
+
+.card-content2 h4{
+  margin-bottom:8px;
+}
+
+.card-content2 p{
+  font-size:14px;
+  color:#555;
+  margin-bottom:10px;
+}
+
+/* PRICE + BUTTON */
+.price-btn2{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.price2{
+  font-weight:bold;
+}
+
+.btn2{
+  background:#ffd54f;
+  color:#ff2c2c;
+  padding:6px 12px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.btn2:hover{
+  transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .cards2{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .cards2{
+    grid-template-columns:1fr;
+  }
+
+  .arrows2{
+    gap:80px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section3{
+  display:flex;
+  justify-content:center;
+  padding:60px 20px;
+}
+
+/* MAIN FLEX */
+.container3{
+  display:flex;
+  gap:30px;
+  max-width:1100px;
+  width:100%;
+}
+
+/* LEFT BOX */
+.left-box3{
+  flex:2;
+  background:#d2a679; /* chocolate */
+  border-radius:20px;
+  padding:30px;
+  position:relative;
+  overflow:hidden;
+  animation:fadeUp 1s ease;
+}
+
+.left-box3 h1{
+  font-size:28px;
+  color:#000;
+  margin-bottom:20px;
+}
+
+/* CONTENT FLEX */
+.left-content3{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+/* IMAGE */
+.left-img3{
+  width:180px;
+  animation:float 3s ease-in-out infinite;
+}
+
+/* FEATURES */
+.features3{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.feature3{
+  display:flex;
+  gap:10px;
+}
+
+.circle3{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  border:2px solid #000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#d2a679;
+  font-size:18px;
+}
+
+.feature3 h4{
+  font-size:16px;
+}
+
+.feature3 p{
+  font-size:13px;
+  color:#222;
+}
+
+/* BUTTON */
+.order-btn3{
+  margin-top:20px;
+  display:inline-block;
+  background:#ff2c2c;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:20px;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.order-btn3:hover{
+  transform:scale(1.1);
+}
+
+/* RIGHT BOX */
+.right-box3{
+  flex:1;
+  background:#ff2c2c;
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  color:#fff;
+  position:relative;
+  animation:fadeUp 1.2s ease;
+}
+
+/* TOP ICON */
+.top-icon3{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:40px;
+  height:40px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ff2c2c;
+}
+
+/* JUICE IMAGE */
+.juice3{
+  width:120px;
+  margin:20px auto;
+  display:block;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* TEXT */
+.right-box3 h3{
+  margin-bottom:10px;
+}
+
+.right-box p{
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+/* BUTTON */
+.try-btn3{
+  background:#ffd54f;
+  color:#000;
+  padding:8px 15px;
+  border-radius:20px;
+  text-decoration:none;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.try-btn3:hover{
+  transform:scale(1.1);
+}
+
+/* ANIMATIONS */
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+
+@keyframes rotateImg{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container3{
+    flex-direction:column;
+  }
+
+  .left-content3{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= HERO ================= */
+.flameHeroZone{
+  height:70vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('what.jpeg') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.heroInnerPulse h1{
+  font-size:55px;
+  animation:slideDown 1s ease;
+}
+
+.heroInnerPulse p{
+  max-width:500px;
+  margin:15px auto;
+}
+
+.heroCTA{
+  background: #ff3c3c;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  color: #fff;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.heroCTA:hover{
+  transform:scale(1.1);
+}
+
+/* ================= SECTION BASE ================= */
+.sectionWrapFlex{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.sectionWrapFlex h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.sectionWrapFlex p{
+  color: #666;
+  margin-bottom:40px;
+}
+
+/* ================= CATEGORY ================= */
+.gridFlavorDeck{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.flavorCardNeo{
+  background: silver;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.flavorCardNeo:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.flavorCardNeo img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.flavorCardNeo:hover img{
+  transform:scale(1.1);
+}
+
+.flavorCardNeo h3{
+  padding:15px;
+}
+
+/* ================= MENU ================= */
+.menuGalaxyGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.menuCardAura{
+  background: #fff;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.menuCardAura:hover{
+  transform:translateY(-10px);
+}
+
+.menuCardAura img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.menuInfoCore{
+  padding:15px;
+}
+
+.priceTagGlow{
+  color:#ff3c3c;
+  font-weight:bold;
+}
+
+/* BUTTON */
+.btnOrbit{
+  display:inline-block;
+  margin-top:10px;
+  background:#ff3c3c;
+  color:#fff;
+  padding:8px 15px;
+  border-radius:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btnOrbit:hover{
+  transform:scale(1.1);
+}
+
+/* ================= PROMO ================= */
+.promoBlastZone{
+  background:#ff3c3c;
+  color:#fff;
+  border-radius:25px;
+  padding:50px;
+}
+
+.promoBlastZone a{
+  background:#fff;
+  color:#ff3c3c;
+  padding:10px 20px;
+  border-radius:20px;
+  text-decoration:none;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes slideDown{
+  from{opacity:0; transform:translateY(-50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .gridFlavorDeck{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .menuGalaxyGrid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+  .gridFlavorDeck{
+    grid-template-columns:1fr;
+  }
+
+  .heroInnerPulse h1{
+    font-size:32px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO */
+.blazeHeroAura{
+  height:70vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('frie.jpeg') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.heroTextCore h1{
+  font-size:55px;
+  animation:fadeDown 1s ease;
+}
+
+.heroTextCore p{
+  max-width:500px;
+  margin:15px auto;
+}
+
+.heroBtnNova{
+  background:#ff3c3c;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  color:#fff;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.heroBtnNova:hover{
+  transform:scale(1.1);
+}
+
+/* SECTION BASE */
+.sectionZenFlow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  gap:40px;
+}
+
+/* TEXT */
+.textNebula h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.textNebula p{
+  color:#555;
+  margin-bottom:20px;
+}
+
+.btnOrbitX{
+  background:#ff3c3c;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  display:inline-block;
+}
+
+/* IMAGE */
+.imgGalaxy img{
+  width:400px;
+  border-radius:20px;
+  animation:float 3s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideLeft{
+  from{opacity:0; transform:translateX(-60px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes slideRight{
+  from{opacity:0; transform:translateX(60px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .sectionZenFlow{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .imgGalaxy img{
+    width:100%;
+  }
+
+  .heroTextCore h1{
+    font-size:32px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO */
+.lavaHeroShell{
+  height:70vh;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('meat.jpg') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.heroCoreFlux h1{
+  font-size:50px;
+  animation:fadeDown 1s ease;
+}
+
+.heroCoreFlux p{
+  max-width:500px;
+  margin:15px auto;
+}
+
+.heroBtnPulse{
+  background:#ff3c3c;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+}
+
+.heroBtnPulse:hover{
+  transform:scale(1.1);
+}
+
+/* SECTION BASE */
+.sectionNovaFlex{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  gap:40px;
+}
+
+/* TEXT */
+.textOrbitZone h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.textOrbitZone p{
+  color:#555;
+  margin-bottom:20px;
+}
+
+.btnGlowRing{
+  background:#ff3c3c;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btnGlowRing:hover{
+  transform:scale(1.1);
+}
+
+/* IMAGE */
+.imgPulseWrap img{
+  width:380px;
+  border-radius:20px;
+  animation:float 3s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideLeft{
+  from{opacity:0; transform:translateX(-60px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes slideRight{
+  from{opacity:0; transform:translateX(60px);}
+  to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .sectionNovaFlex{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .imgPulseWrap img{
+    width:100%;
+  }
+
+  .heroCoreFlux h1{
+    font-size:32px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER BASE */
+.footerSolarZone{
+  background:#ffd54f;
+  padding:60px 8%;
+  text-align:center;
+}
+
+/* TOP BOX */
+.topBoxAura{
+  background:#fff;
+  max-width:600px;
+  margin:auto;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  animation:fadeUp 1s ease;
+}
+
+.topBoxAura h2{
+  margin-bottom:10px;
+}
+
+.topBoxAura p{
+  margin-bottom:20px;
+  color:#555;
+}
+
+/* INPUT + BUTTON */
+.inputFlexCore{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.inputFieldNeo{
+  padding:10px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  outline:none;
+}
+
+.orderBtnPrime{
+  background:#ff2c2c;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.orderBtnPrime:hover{
+  transform:scale(1.1);
+}
+
+/* INFO SECTIONS */
+.infoGridNova{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:50px;
+  text-align:left;
+}
+
+.infoBlockZen h3{
+  margin-bottom:10px;
+}
+
+.infoBlockZen p{
+  font-size:14px;
+  color:#333;
+}
+
+/* LINE */
+.dividerLineFlow{
+  height:2px;
+  background:#000;
+  margin:40px 0;
+}
+
+/* SOCIAL */
+.socialFluxZone{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.socialIconOrb{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.socialIconOrb:hover{
+  transform:translateY(-5px);
+}
+
+/* COPYRIGHT */
+.copyTextNova{
+  margin-top:15px;
+  font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .infoGridNova{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <!-- LOGO -->
+  <div class="logo0">MOKR<br>chefin</div>
+
+  <!-- MENU -->
+  <nav id="menu0">
+    <a href="#">Home</a>
+    <a href="#cate">Category</a>
+    <a href="#beauty">Beauty</a>
+    <a href="#food">Food</a>
+    
+    <button class="btn0">Give Flow</button>
+  </nav>
+
+  <!-- RIGHT ICONS -->
+  <div class="icons0">
+    🔍 🛒
+  </div>
+
+  <!-- HAMBURGER -->
+  <div class="hamburger0" onclick="toggleMenu()">☰</div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero1">
+
+  <!-- LEFT CONTENT -->
+  <div class="hero-content1">
+    <h1>Order Your <br>Favorites in Minutes</h1>
+    <p>
+      Craving something delicious? Get your favorite pizza and zinger burgers
+      delivered hot and fresh right to your doorstep in just minutes.
+      Fast delivery, amazing taste, and unbeatable deals!
+    </p>
+
+    <a href="#" class="btn1">Order Now</a>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="hero-img1">
+    <img src="grilled.png" alt="Zinger Burger">
+
+    <!-- ICON -->
+    <div class="icon1">🍔</div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section2">
+
+  <!-- TOP 3 BOXES -->
+  <div class="top-boxes2">
+    
+    <div class="box red2">
+      <img src="grill.jpg">
+      <h3>Zinger Burger</h3>
+    </div>
+
+    <div class="box yellow2">
+      <img src="top.jpg">
+      <h3>Spicy Zinger</h3>
+    </div>
+
+    <div class="box red2">
+      <img src="image.jpeg">
+      <h3>French Fries</h3>
+    </div>
+
+  </div>
+
+  <!-- ARROWS -->
+  <div class="arrows2">
+    <div class="arrow2">⬇</div>
+    <div class="arrow2">⬇</div>
+    <div class="arrow2">⬇</div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards2">
+
+    <!-- CARD -->
+    <div class="card2">
+      <span class="badge2">🔥</span>
+      <img src="grill.jpg">
+      <div class="card-content2">
+        <h4>Classic Zinger</h4>
+        <p>Crispy chicken, fresh lettuce, mayo sauce in soft bun.</p>
+        <div class="price-btn2">
+          <span class="price2">$5.99</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat 6 more cards -->
+
+    <div class="card2">
+      <span class="badge2">⭐</span>
+      <img src="big.jpg">
+      <div class="card-content2">
+        <h4>Cheese Zinger</h4>
+        <p>Loaded with melted cheese and crispy chicken fillet.</p>
+        <div class="price-btn2">
+          <span class="price2">$6.99</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card2">
+      <span class="badge2">🔥</span>
+      <img src="top.jpg">
+      <div class="card-content2">
+        <h4>Double Zinger</h4>
+        <p>Double chicken layers with spicy sauce and cheese.</p>
+        <div class="price-btn2">
+          <span class="price2">$7.99</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card2">
+      <span class="badge2">⭐</span>
+      <img src="stick.jpg">
+      <div class="card-content2">
+        <h4>BBQ Zinger</h4>
+        <p>Smoky BBQ sauce with crispy zinger chicken.</p>
+        <div class="price-btn2">
+          <span class="price2">$6.49</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card2">
+      <span class="badge2">🍟</span>
+      <img src="image.jpeg">
+      <div class="card-content2">
+        <h4>Loaded Fries</h4>
+        <p>Fries topped with cheese, sauces, and spices.</p>
+        <div class="price-btn2">
+          <span class="price2">$3.99</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card2">
+      <span class="badge2">🔥</span>
+      <img src="with.jpg">
+      <div class="card-content2">
+        <h4>Spicy Zinger</h4>
+        <p>Extra spicy chicken with jalapenos and sauce.</p>
+        <div class="price-btn2">
+          <span class="price2">$6.59</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card2">
+      <span class="badge2">⭐</span>
+      <img src="grill.jpg">
+      <div class="card-content2">
+        <h4>Crispy Zinger</h4>
+        <p>Crunchy fried chicken with classic flavor.</p>
+        <div class="price-btn2">
+          <span class="price2">$5.49</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card2">
+      <span class="badge2">⭐</span>
+      <img src="fresh.jpg">
+      <div class="card-content2">
+        <h4>Crispy Zinger</h4>
+        <p>Crunchy fried chicken with classic flavor.</p>
+        <div class="price-btn2">
+          <span class="price2">$5.49</span>
+          <a href="#" class="btn2">Order</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section3">
+
+<div class="container3">
+
+  <!-- LEFT BOX -->
+  <div class="left-box3">
+
+    <h1>Order Food The Burgers</h1>
+
+    <div class="left-content3">
+
+      <img class="left-img3" src="front.png" alt="Delivery">
+
+      <div class="features3">
+
+        <div class="feature3">
+          <div class="circle3">📰</div>
+          <div>
+            <h4>News</h4>
+            <p>Latest updates and hot deals available daily.</p>
+          </div>
+        </div>
+
+        <div class="feature3">
+          <div class="circle3">🍟</div>
+          <div>
+            <h4>Fries</h4>
+            <p>Crispy fries with fresh taste and premium quality.</p>
+          </div>
+        </div>
+
+        <a href="#" class="order-btn3">Order</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT BOX -->
+  <div class="right-box3">
+
+    <div class="top-icon3">🍹</div>
+
+    <img class="juice3" src="view.png" alt="Juice">
+
+    <h3>SARCY BELARTH</h3>
+    <p>Fresh juice with natural ingredients and refreshing taste.</p>
+
+    <a href="#" class="try-btn3">Click Trys</a>
+
+  </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="flameHeroZone" id="cate">
+  <div class="heroInnerPulse">
+    <h1>Hot Pizza Delivered Fast</h1>
+    <p>Enjoy fresh, cheesy pizzas and delicious fast food delivered straight to your door.</p>
+    <a href="#" class="heroCTA">Order Now</a>
+  </div>
+</section>
+
+<!-- CATEGORY -->
+<section class="sectionWrapFlex">
+  <h2>Our Categories</h2>
+  <p>Pick your favorite food</p>
+
+  <div class="gridFlavorDeck">
+
+    <div class="flavorCardNeo">
+      <img src="what.jpeg">
+      <h3>Pizza</h3>
+    </div>
+
+    <div class="flavorCardNeo">
+      <img src="grill.jpg">
+      <h3>Burgers</h3>
+    </div>
+
+    <div class="flavorCardNeo">
+      <img src="image.jpeg">
+      <h3>Fries</h3>
+    </div>
+
+    <div class="flavorCardNeo">
+      <img src="wha.jpeg">
+      <h3>Drinks</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="sectionWrapFlex">
+  <h2>Popular Menu</h2>
+  <p>Customer favorites</p>
+
+  <div class="menuGalaxyGrid">
+
+    <div class="menuCardAura">
+      <img src="frie.jpeg">
+      <div class="menuInfoCore">
+        <h3>Cheese Pizza</h3>
+        <p>Loaded with cheese and fresh toppings.</p>
+        <span class="priceTagGlow">$9.99</span><br>
+        <a href="#" class="btnOrbit">Order</a>
+      </div>
+    </div>
+
+    <div class="menuCardAura">
+      <img src="fresh.jpg">
+      <div class="menuInfoCore">
+        <h3>Zinger Burger</h3>
+        <p>Crispy spicy chicken burger.</p>
+        <span class="priceTagGlow">$6.99</span><br>
+        <a href="#" class="btnOrbit">Order</a>
+      </div>
+    </div>
+
+    <div class="menuCardAura">
+      <img src="fries.jpeg">
+      <div class="menuInfoCore">
+        <h3>Fries</h3>
+        <p>Golden crispy fries.</p>
+        <span class="priceTagGlow">$3.99</span><br>
+        <a href="#" class="btnOrbit">Order</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="sectionWrapFlex">
+  <div class="promoBlastZone">
+    <h2>Special Deal</h2>
+    <p>Get 25% off on your first order!</p>
+    <a href="#">Grab Now</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="blazeHeroAura" id="beauty">
+  <div class="heroTextCore">
+    <h1>Experience the Beauty of Pizza Café</h1>
+    <p>A place where taste meets elegance. Enjoy premium pizzas in a cozy and stylish environment.
+      The café should be designed with a stylish and contemporary atmosphere—
+      featuring warm lighting, cozy seating, and a clean, modern interior that instantly makes guests feel relaxed and welcome. Use a mix of rustic and elegant design elements such as wooden textures, marble tables, soft leather chairs,
+      and subtle decorative accents to create a balanced and premium look.
+    </p>
+    <a href="#" class="heroBtnNova">Explore Menu</a>
+  </div>
+</section>
+
+<!-- SECTION 1 -->
+<section class="sectionZenFlow">
+  <div class="textNebula animateLeft">
+    <h2>Elegant Dining Experience</h2>
+    <p>Our café is designed with modern aesthetics, warm lighting, and a cozy atmosphere to make every meal special and memorable.
+      The dining experience should highlight not just the food, but the journey. 
+      Present beautifully plated dishes with artistic detailing, where colors, 
+      textures, and aromas come together to create a sensory experience. Every pizzaor dish 
+      should look like a work of art—crafted with care and served with pride.
+     Service should be seamless, professional, and welcoming. Staff should be 
+     attentive without being intrusive—offering personalized recommendations, 
+     ensuring comfort, and responding quickly to every need. The goal is to make 
+     every guest feel valued and relaxed.
+    </p>
+    <a href="#" class="btnOrbitX">Discover More</a>
+  </div>
+  <div class="imgGalaxy animateRight">
+    <img src="pre.jpeg">
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="sectionZenFlow">
+  <div class="imgGalaxy animateLeft">
+    <img src="dining.jpeg">
+  </div>
+  <div class="textNebula animateRight">
+    <h2>Fresh & Premium Ingredients</h2>
+    <p>We use only the freshest ingredients, rich cheese, and hand-picked toppings to create pizzas that are full of flavor.
+      Craft a visually stunning and mouthwatering presentation of a premium pizza made with the freshest, highest-quality ingredients. The pizza should feature a perfectly baked golden crust—crispy on the outside, soft and airy on the 
+      inside—crafted from hand-kneaded dough and slow-fermented for rich flavor.
+    </p>
+    <a href="#" class="btnOrbitX">View Ingredients</a>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="sectionZenFlow">
+  <div class="textNebula animateLeft">
+    <h2>Fast Delivery & Great Service</h2>
+    <p>Enjoy lightning-fast delivery and excellent customer service that ensures your food arrives hot and fresh every time.
+       Equally important, emphasize the café’s exceptional customer service. Friendly staff, quick response times, 
+       and attention to detail should create a welcoming and trustworthy brand experience. Whether it's handling special requests, ensuring order accuracy, 
+       or providing instant support, the service should feel personal, reliable, and top-tier.
+       The overall tone should feel modern, energetic, and customer-focused—capturing the essence of convenience, speed, and satisfaction. The visual style should include motion, warm tones, and real-life moments 
+        of happy customers receiving their pizza quickly and enjoying every bite.
+    </p>
+    <a href="#" class="btnOrbitX">Order Now</a>
+  </div>
+  <div class="imgGalaxy animateRight">
+    <img src="fast.jpeg">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="lavaHeroShell" id="food">
+  <div class="heroCoreFlux">
+    <h1>Welcome to Our Pizza Café</h1>
+    <p>Discover delicious food, premium quality, and a modern dining experience.</p>
+    <a href="#" class="heroBtnPulse">Order Now</a>
+  </div>
+</section>
+
+<!-- AVAILABLE FOODS -->
+<section class="sectionNovaFlex">
+  <div class="textOrbitZone animateLeft">
+    <h2>Available Foods</h2>
+    <p>
+      At our café, we proudly serve a wide range of delicious foods including cheesy pizzas,
+      crispy zinger burgers, loaded fries, refreshing drinks, and mouthwatering fast food items.
+      Every dish is prepared fresh with high-quality ingredients to give you the 
+      best taste experience.Start by featuring a range of signature pizzas, each 
+      crafted with unique flavors and premium ingredients. Include classics like 
+      Margherita, Pepperoni, and BBQ Chicken, alongside gourmet options such as 
+      Veggie Supreme, Four Cheese, and Spicy Italian. Each pizza should look freshly baked with golden crusts, melted cheese, and vibrant toppings.
+      Expand the menu to include complementary items such as cheesy garlic bread, 
+      crispy fries, pasta dishes, fresh salads, and flavorful appetizers. 
+      Highlight refreshing beverages like cold drinks, fresh juices, milkshakes, 
+      and coffee options that complete the dining experience.
+    </p>
+    <a href="#" class="btnGlowRing">View Menu</a>
+  </div>
+  <div class="imgPulseWrap animateRight">
+    <img src="with.jpg">
+  </div>
+</section>
+
+<!-- NOT AVAILABLE FOODS -->
+<section class="sectionNovaFlex">
+  <div class="imgPulseWrap animateLeft">
+    <img src="fries.jpeg">
+  </div>
+  <div class="textOrbitZone animateRight">
+    <h2>Not Available Foods</h2>
+    <p>
+      Currently, we do not offer traditional desi dishes, seafood platters, or heavy continental meals.
+      Our focus is on fast food excellence, ensuring every item we serve meets our
+      high standards of taste and quality.List items that are currently not 
+      available, such as specific gourmet pizzas, limited-edition flavors, 
+      specialty toppings, or selected beverages. Make it clear that these items 
+      are either temporarily out of stock or being refreshed to maintain the 
+      highest quality.Reassure customers by emphasizing that only the freshest 
+      ingredients are used, and if something doesn’t meet the café’s quality 
+      standards, it won’t be served. This reinforces trust and highlights the 
+      café’s dedication to excellence.Visually, the design should be minimal and 
+      elegant—using soft neutral tones, subtle icons (like “out of stock” or 
+      “coming soon”), and smooth animations that keep the experience engaging and modern.
+    </p>
+    <a href="#" class="btnGlowRing">Explore More</a>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="sectionNovaFlex">
+  <div class="textOrbitZone animateLeft">
+    <h2>Why Choose Our Café?</h2>
+    <p>
+      We combine modern ambiance, quick service, and unbeatable flavors to deliver a premium food experience.
+      From dine-in comfort to fast delivery, we make sure every customer enjoys 
+      quality and satisfaction.Showcase the café’s strong reputation through customer feedback and reviews. Include realistic and positive comments from customers who appreciate the taste, fast service, friendly staff, and overall atmosphere. Reflect emotions like happiness, satisfaction, 
+      and trust—people recommending the café to others and coming back again.Example review style:<br>
+     1“The pizza was incredibly fresh and full of flavor. Definitely one of the best cafés I’ve visited!”<br>
+     2“Fast delivery and amazing service. The staff is so friendly and professional.”<br>
+      3“A perfect place to relax and enjoy quality food with friends and family.”<br>
+      “4Every bite feels premium. You can really taste the difference!”<br>
+      Also highlight consistency—customers know they will always receive 
+      high-quality food and excellent service every time they visit.<br> Build 
+      trust by showing that the café values its customers, listens to feedback, 
+      and continuously improves.
+    </p>
+    <a href="#" class="btnGlowRing">Order Today</a>
+  </div>
+  <div class="imgPulseWrap animateRight">
+    <img src="fast.jpeg">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footerSolarZone">
+
+  <!-- TOP BOX -->
+  <div class="topBoxAura">
+    <h2>Join Our Café Experience</h2>
+    <p>Enter your name and order your favorite food instantly with us.</p>
+
+    <div class="inputFlexCore">
+      <input type="text" class="inputFieldNeo" placeholder="Enter Your Name" id="nameInput">
+      <button class="orderBtnPrime" onclick="orderNow()">Order Now</button>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="infoGridNova">
+
+    <div class="infoBlockZen">
+      <h3>About Us</h3>
+      <p>We provide delicious fast food with premium quality and a modern café experience.</p>
+    </div>
+
+    <div class="infoBlockZen">
+      <h3>Contact Us</h3>
+      <p>Email: cafe@email.com<br>Phone: +123 456 789</p>
+    </div>
+
+    <div class="infoBlockZen">
+      <h3>Categories</h3>
+      <p>Pizza, Burgers, Fries, Drinks and more tasty items available for you.</p>
+    </div>
+
+  </div>
+
+  <!-- LINE -->
+  <div class="dividerLineFlow"></div>
+
+  <!-- SOCIAL -->
+  <div class="socialFluxZone">
+    <div class="socialIconOrb">📘</div>
+    <div class="socialIconOrb">📸</div>
+    <div class="socialIconOrb">🐦</div>
+    <div class="socialIconOrb">▶</div>
+  </div>
+
+  <div class="copyTextNova">
+    © 2026 Pizza Café | All Rights Reserved
+  </div>
+
+</footer>
+
+
+
+
+<script>
+
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Extra smooth hover animation via JS
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("mouseover", () => {
+  btn.style.transform = "scale(1.1)";
+});
+
+btn.addEventListener("mouseout", () => {
+  btn.style.transform = "scale(1)";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// simple hover animation enhancement
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('mouseenter',()=>{
+    card.style.transform="translateY(-12px)";
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform="translateY(0)";
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// smooth fade animation on scroll
+const revealItems = document.querySelectorAll('.flavorCardNeo, .menuCardAura');
+
+window.addEventListener('scroll',()=>{
+  revealItems.forEach(item=>{
+    const top = item.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      item.style.opacity = "1";
+      item.style.transform = "translateY(0)";
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SCROLL ANIMATION
+const animated = document.querySelectorAll('.animateLeft, .animateRight');
+
+window.addEventListener('scroll',()=>{
+  animated.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 50){
+      if(el.classList.contains('animateLeft')){
+        el.style.animation = "slideLeft 1s forwards";
+      }else{
+        el.style.animation = "slideRight 1s forwards";
+      }
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SCROLL ANIMATION
+const elements = document.querySelectorAll('.animateLeft, .animateRight');
+
+window.addEventListener('scroll', ()=>{
+  elements.forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 50){
+      if(el.classList.contains('animateLeft')){
+        el.style.animation = "slideLeft 1s forwards";
+      }else{
+        el.style.animation = "slideRight 1s forwards";
+      }
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function orderNow(){
+  const name = document.getElementById("nameInput").value;
+
+  if(name === ""){
+    alert("Please enter your name first!");
+  }else{
+    alert("Thank you " + name + "! Your order request has been received.");
+  }
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
